@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="cc.css">
+    <title>A Clicker Game</title>
+</head>
+<body>
+
+    <img id="gummy" src="gummybear.png"></img>
+    <h1>Cheap Clicker</h1>
+    <sub>Clicking a button should be fun, right?</sub>
+    <p>fuit gummy : <span id="count">0</span></p>
+    <button id="clicker">
+        Gib me fuit gummy!
+    </button>
+    
+    <script>
+        let gummy = 0;
+        let curr_col = 0;
+
+        function update(){
+            document.getElementById("count").innerHTML = gummy;
+        }
+
+        function change_color(val){
+            document.querySelector("#gummy").style.filter = "hue-rotate(" + val + "deg)";
+        }
+
+        function change_size(val){
+            document.querySelector("#gummy").style.width = val + "px";
+            document.querySelector("#gummy").style.right = (100 - val/2) + "px";
+        }
+
+        function step_color(){
+            change_color(curr_col);
+            if(curr_col > 360){
+                curr_col = 0;
+            } else {
+                curr_col++;
+            }
+        }
+
+        function squeeze(){
+            // size 100 -> 50 -> 100
+            let size = 100;
+            let shrinked = false;
+            const interval = setInterval(function(){
+                change_size(size);
+                if(!shrinked){
+                    if(size > 90){
+                        size-=2;
+                    }else{
+                        shrinked = true;
+                    }
+                } else {
+                    if(size < 100){
+                        size+=2;
+                    }else{
+                        clearInterval(interval);
+                        change_size(100);
+                    }
+                }
+            }, 10);
+
+
+        }
+
+        const color_changer = setInterval(step_color, 100);
+
+
+        clicker.onclick = function(){
+            gummy++;
+            squeeze();
+            update();
+        }
+
+
+    </script>
+</body>
