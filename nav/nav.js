@@ -4,6 +4,7 @@ document.write('    height: 30px;');
 document.write('    width: 100px;');
 document.write('    border: 2px;');
 document.write('    margin-right: 2px;');
+document.write('    margin-bottom: 5px;');
 document.write('    color : white;');
 document.write('    background-color: lightseagreen;');
 document.write('');
@@ -19,3 +20,4 @@ document.write('<button class="nav_button" onclick="window.location.href=\'../ho
 document.write('<button class="nav_button" onclick="window.location.href=\'../clicker/cheapclicker.html\'">Clicker</button>');
 document.write('<button class="nav_button" onclick="window.location.href=\'../cringe/cringepage.html\'">Cringe</button>');
 document.write('<button class="nav_button" onclick="window.location.href=\'../pong/pong.html\'">Pong</button>');
+document.write('<button class="nav_button" onclick="window.location.href=\'../serversim/server.html\'">ServerSim</button>');

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../global.css">
+<head>
+    <title>Server Simulator</title>
+    <script src="../nav/nav.js"></script>
+</head>
+
+<body>
+    <h1>Server Simulator</h1>
+    <br>
+        <span><input id="name-input" placeholder="Enter Your Name" rows="1" cols="20"></textarea></span>
+        <span style="margin-right:100px;"><button id="name-button">Rename</button></span>
+        <span><button id="connect-button">Connect</button></span>
+        <span style="margin-right:100px;"><button id="disconnect-button">Disconnect</button></span>
+        <span><button id="add-button">++</button></span>
+        <span><button id="subtract-button">--</button></span>
+    </br>
+    <br>
+        <table id="listing" style="border:1px solid black; table-layout:fixed; text-align: center;">
+            <colgroup>
+                <col style="width:100px;">
+                <col style="width:100px;">
+            </colgroup>
+            <tbody id="listing-title">
+                <tr>
+                    <th>Name</th>
+                    <th>Coins</th>
+                </tr>
+            </tbody>
+            <tbody id="listing-data">
+                <tr>
+                    <td>Test1</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </br>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+        // NOTE - INCLUDE YOUR FIREBASE CONFIG HERE FOR ANYTHING TO WORK:
+        const firebaseConfig = {
+            apiKey: "AIzaSyDTOY7gZ7xmDKqxRAHFv9uI1HEgkm_sOZ0",
+            authDomain: "demopage1-c4440.firebaseapp.com",
+            databaseURL: "https://demopage1-c4440-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "demopage1-c4440",
+            storageBucket: "demopage1-c4440.appspot.com",
+            messagingSenderId: "656753879482",
+            appId: "1:656753879482:web:8bc4bcd86dc17c76285583"
+
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="server.js"></script>
+
+</body>
