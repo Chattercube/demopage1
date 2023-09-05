@@ -1,0 +1,100 @@
+body{
+    background-color: #1a1a1a;
+    font-family: "Roboto";
+    color: #000000;
+}
+
+h1,h2{
+    text-shadow: 0.08em 0.08em 0px #000000;
+    color: #ffffff;
+    line-height: 1;
+}
+
+h3{
+    color: #4d4d4d;
+    line-height: 1;
+}
+
+h1{ font-size: 40px; }
+h2{ font-size: 30px; }
+
+header, main{
+
+    width: 1200px;
+    min-width: 70%;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    box-sizing: border-box;
+    box-shadow: 10px 10px 0px #000000;
+
+}
+
+header{
+    background-color: #0055d4;
+    height: 150px;
+}
+
+main{
+
+    background-color: #999999;
+    display: block;
+    padding: 20px;
+
+}
+
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+
+    margin: 0px;
+    height: 50px;
+    width: 100%;
+    
+    list-style: none;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logo{
+    margin-bottom: 0px;
+    max-height: 100px;
+}
+
+nav>div {
+    float: right;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+  
+nav>div>a {
+    display: block;
+    background-color: #666666;
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    margin:1px;
+    height: 100%;
+    padding:10px;
+    padding-top: 10px;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+    
+}
+
+nav>div>a:hover {
+    background-color: #550000;
+    transition: background-color 0.2s;
+}
+
+
+
+
